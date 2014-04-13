@@ -6,8 +6,10 @@
         <meta charset="utf-8"> 
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <link href="css/style.css" rel="stylesheet">
         <link href="css/font-awesome.css" rel="stylesheet">
+
 
 		<style>
 
@@ -21,7 +23,7 @@
 				-moz-background-size: contain;
 				-o-background-size: contain;
 				background-size: contain;
-				font-family: "Open Sans",serif;
+				font-family: "Open Sans", sans-serif;
 				height: 100%;
 			}
 
@@ -100,7 +102,7 @@
 	                <p class="col-md-4">LISÄTIETOJA</p>
             	</div>
 	            <div class="col-xs-6 pull-right">
-	                <p class="text-right">
+	                <p class="text-right col-xs-12">
 	                        <a class="some" href="http://www.facebook.com"><i class="fa fa-facebook fa-2x"></i></a>
 	                        <a class="some" href="http://www.twitter.com"><i class="fa fa-twitter fa-2x"></i></a>
 	                </p>
