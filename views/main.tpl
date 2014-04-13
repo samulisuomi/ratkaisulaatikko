@@ -83,7 +83,7 @@
 							<p><input type="text" class="form-control input-lg" name="city" placeholder="Kaupunki tai kunta" /></p>
 							<p><textarea class="form-control" name="description" rows="4" placeholder="Kuvaus ongelmastasi ja erityisvaatimuksistasi"></textarea></p>
 							<p><input type="text" class="form-control input-lg" name="email" placeholder="Sähköpostiosoite" /></p>
-							<p class="help-block text-center"><small>Kaikki yhteydenpito hoituu sähköpostisi välityksellä. Käyttäjätunnuksen tekeminen ei ole pakollista.</small></p>
+							<p class="help-block"><small>Kaikki yhteydenpito hoituu sähköpostisi välityksellä. Käyttäjätunnuksen tekeminen ei ole pakollista.</small></p>
 							<button type="submit" class="btn btn-success btn-lg">Aloita ratkaiseminen</button>
 						</form>
 
