@@ -19,16 +19,13 @@
 
 			body {
 				background: url(img/toolbox.jpg) no-repeat center center fixed; 
-				-webkit-background-size: contain;
-				-moz-background-size: contain;
-				-o-background-size: contain;
-				background-size: contain;
+				background-size: 1280px;
 				font-family: "Open Sans", sans-serif;
 				height: 100%;
 			}
 
 			.boxContainer {
-				height: 90%;
+				height: 95%;
 			    display: table;
 			    vertical-align: middle;
 			}
@@ -55,6 +52,14 @@
 				color: #333;
 			}
 
+			textarea {
+			   resize: none;
+			}
+
+			input-lg {
+				width: 50%;
+			}
+
 
 		</style>
 
@@ -62,46 +67,33 @@
 	<body>
 		<div class="container boxContainer">
 			<div class="row vertical-center-row">
-				<div class="col-lg-12">
-					<div class="col-md-6 col-md-offset-3 panel panel-default">
 
-						<h1 class="margin-base-vertical text-center">Ratkaisulaatikko</h1>
+					<div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 panel panel-default text-center">
 
-						<p>
-							tähän
-						</p>
-						<p>
-							lisää laaitkoita
-						</p>
+						<h1 class="margin-base-vertical">Ratkaisulaatikko</h1>
 
-						<p>
-							heh
-						</p>
+						<form role="form" class="margin-base-vertical">
+							<p><input type="text" class="form-control input-lg" name="name" placeholder="Nimi" /></p>
+							<p><input type="text" class="form-control input-lg" name="city" placeholder="Kaupunki tai kunta" /></p>
+							<p><input type="text" class="form-control input-lg" name="email" placeholder="Sähköpostiosoite" /></p>
+							<p><textarea class="form-control" name="description" rows="4" placeholder="Kuvaus ongelmastasi ja erityisvaatimuksistasi"></textarea></p>
 
-						<form class="margin-base-vertical">
-							<p class="input-group">
-								<span class="input-group-addon"><span class="icon-envelope"></span></span>
-								<input type="text" class="form-control input-lg" name="email" placeholder="Sähköpostiosoite" />
-							</p>
 							<p class="help-block text-center"><small>Kaikki yhteydenpito hoituu sähköpostisi välityksellä. Käyttäjätunnuksen tekeminen ei ole pakollista.</small></p>
-							<p class="text-center">
-								<button type="submit" class="btn btn-success btn-lg">Aloita ratkaiseminen</button>
-							</p>
-							</span>
+							<button type="submit" class="btn btn-success btn-lg">Aloita ratkaiseminen</button>
 						</form>
 					</div>
-				</div>
+			
 			</div>
 		</div>
 
 		<div class="container footerContainer">
                
 	        <div class="row">
-	        	<div class="col-xs-6 pull-left">
-	        		<p class="col-md-4">KIRJAUDU</p>
-	                <p class="col-md-4">LISÄTIETOJA</p>
+	        	<div class="pull-left">
+	        		<p class="col-sm-6">KIRJAUDU</p>
+	                <p class="col-sm-6">LISÄTIETOJA</p>
             	</div>
-	            <div class="col-xs-6 pull-right">
+	            <div class="pull-right">
 	                <p class="text-right col-xs-12">
 	                        <a class="some" href="http://www.facebook.com"><i class="fa fa-facebook fa-2x"></i></a>
 	                        <a class="some" href="http://www.twitter.com"><i class="fa fa-twitter fa-2x"></i></a>
