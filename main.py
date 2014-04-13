@@ -18,6 +18,14 @@ if __name__=="__main__":
 def home():
 	return template("main.tpl")
 
+@app.route('/postaproblem', method='POST')
+def postaproblem():
+	name = request.forms.get('name')
+	city = request.forms.get('city')
+	description = request.forms.get('description')
+	email = request.forms.get('email')
+	return template("<h1>You sent:</h1><p><strong>Name: </strong>{{name}}</p><p><strong>City: </strong>{{city}}</p><p><strong>Description: </strong>{{description}}</p><p><strong>Email: </strong>{{email}}</p>", name=name, city=city, description=description, email=email)
+
 @app.error(404)
 def error404(error):
     return template("404.tpl")

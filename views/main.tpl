@@ -77,7 +77,8 @@
 						<h1 class="margin-base-vertical"><img id="logo" src="img/ratkaisulaatikko.png"></h1>
 						<h4>Kilpailuta helposti niin pienet kuin isotkin kodin askareesi!</h4>
 						<h4>Täytä lomake ja asiasi alkaa edistyä välittömästi.</h4>
-						<form role="form" class="margin-base-vertical">
+
+						<form role="form" class="margin-base-vertical" action="/postaproblem" method="post">
 							<p><input type="text" class="form-control input-lg" name="name" placeholder="Nimi" /></p>
 							<p><input type="text" class="form-control input-lg" name="city" placeholder="Kaupunki tai kunta" /></p>
 							<p><textarea class="form-control" name="description" rows="4" placeholder="Kuvaus ongelmastasi ja erityisvaatimuksistasi"></textarea></p>
@@ -85,6 +86,7 @@
 							<p class="help-block text-center"><small>Kaikki yhteydenpito hoituu sähköpostisi välityksellä. Käyttäjätunnuksen tekeminen ei ole pakollista.</small></p>
 							<button type="submit" class="btn btn-success btn-lg">Aloita ratkaiseminen</button>
 						</form>
+
 					</div>
 			
 			</div>
