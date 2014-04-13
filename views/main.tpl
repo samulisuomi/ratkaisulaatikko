@@ -12,17 +12,16 @@
 		<style>
 
 			html {
+				height: 100%;
+			}
+
+			body {
 				background: url(img/toolbox.jpg) no-repeat center center fixed; 
 				-webkit-background-size: contain;
 				-moz-background-size: contain;
 				-o-background-size: contain;
 				background-size: contain;
-				height: 100%;
-			}
-
-			body {
 				font-family: "Open Sans",serif;
-				background: transparent;
 				height: 100%;
 			}
 
@@ -31,6 +30,7 @@
 			    display: table;
 			    vertical-align: middle;
 			}
+
 			.vertical-center-row {
 			    display: table-cell;
 			    vertical-align: middle;
@@ -43,6 +43,16 @@
 			.margin-base-vertical {
 				margin: 40px 0;
 			}
+
+			.footerContainer {
+				height: 15px;
+			}
+
+			.some {
+				margin-left: 5px;
+				color: #333;
+			}
+
 
 		</style>
 
@@ -78,17 +88,23 @@
 							</span>
 						</form>
 					</div>
+				</div>
 			</div>
 		</div>
 
-		<div class = "navbar-fixed-bottom">
+		<div class="container footerContainer">
                
-	        <div class="container">
-	                <p class = "navbar-text pull-left">TIETOJA PALVELUSTA</p>
-	                <p class = "navbar-text pull-right">
-	                        <a href="http://www.facebook.com"><i class="fa fa-facebook fa-2x some"></i></a>
-	                        <a href="http://www.twitter.com"><i class="fa fa-twitter fa-2x some"></i></a>
+	        <div class="row">
+	        	<div class="col-xs-6 pull-left">
+	        		<p class="col-md-4">KIRJAUDU</p>
+	                <p class="col-md-4">LISÄTIETOJA</p>
+            	</div>
+	            <div class="col-xs-6 pull-right">
+	                <p class="text-right">
+	                        <a class="some" href="http://www.facebook.com"><i class="fa fa-facebook fa-2x"></i></a>
+	                        <a class="some" href="http://www.twitter.com"><i class="fa fa-twitter fa-2x"></i></a>
 	                </p>
+	            </div>
 
 	        </div>
                
