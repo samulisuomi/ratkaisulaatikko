@@ -26,7 +26,7 @@ def postaproblem():
 	description = request.forms.get('description')
 	email = request.forms.get('email')
 	if ((name == "LeanSoftwareStartup") or (email == "samulisuomi@yahoo.fi")): #TODO!!
-		mail.sendEmail(name, email) #TODO!!
+		mail.sendConfirmationEmail(name, email) #TODO!!
 		return template("postaproblem.tpl", email=email)
 	else:
 		redirect("/")
@@ -36,9 +36,14 @@ def validateemail():
 	#TODO:
 	id = request.query.id
 	if (id == "123456789"):
+		mail.tempSendSolutionMail()
 		return template("validate.tpl")
 	else:
 		redirect("/")
+
+@app.route("/ratkaisusivu")
+def solutionpage():
+	return template("solutionpage.tpl")
 
 @app.error(404)
 def error404(error):
