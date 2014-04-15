@@ -17,7 +17,7 @@ if __name__=="__main__":
 
 @app.route("/")
 def home():
-	return template("main.tpl")
+	return template("index.tpl")
 
 @app.route('/postaproblem', method='POST')
 def postaproblem():
@@ -25,18 +25,18 @@ def postaproblem():
 	city = request.forms.get('city')
 	description = request.forms.get('description')
 	email = request.forms.get('email')
-	if (email == "samulisuomi@yahoo.fi"): #TODO!!
+	if ((name == "LeanSoftwareStartup") or (email == "samulisuomi@yahoo.fi")): #TODO!!
 		mail.sendEmail(name, email) #TODO!!
-		return template("<h1>You sent:</h1><p><strong>Name: </strong>{{name}}</p><p><strong>City: </strong>{{city}}</p><p><strong>Description: </strong>{{description}}</p><p><strong>Email: </strong>{{email}}</p>", name=name, city=city, description=description, email=email)
+		return template("postaproblem.tpl", email=email)
 	else:
 		redirect("/")
 
 @app.route("/vahvista")
 def validateemail():
+	#TODO:
 	id = request.query.id
-	email = "samulisuomi@yahoo.fi" #TODO:
 	if (id == "123456789"):
-		return template("<p>Email address <strong>{{email}}</strong> was validated!", id=id, email=email)
+		return template("validate.tpl")
 	else:
 		redirect("/")
 

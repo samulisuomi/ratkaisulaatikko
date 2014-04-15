@@ -3,7 +3,7 @@
 from google.appengine.api import mail
 
 def sendEmail(name, email):
-	mail.send_mail(sender="Samuli Suomi <sasuomi@gmail.com>",
+	mail.send_mail(sender="Ratkaisulaatikko <ratkaisulaatikko@ratkaisulaatikko.appspotmail.com>",
 	              to=name + " <" + email + ">",
 	              subject="Vahvista sähköpostiosoitteesi - Ratkaisulaatikko",
 	              body="""
