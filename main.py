@@ -1,6 +1,7 @@
 from framework import bottle
 from framework.bottle import Bottle, TEMPLATE_PATH, route, template, error, request, debug, post, redirect, url, SimpleTemplate, static_file
 from google.appengine.ext.webapp.util import run_wsgi_app
+from py import mail
 
 #Instead of supplying url in every handler, set up a template default
 SimpleTemplate.defaults["url"] = lambda x, **kwargs: SETTINGS.URL_BASE + url(x, **kwargs)
@@ -24,7 +25,20 @@ def postaproblem():
 	city = request.forms.get('city')
 	description = request.forms.get('description')
 	email = request.forms.get('email')
-	return template("<h1>You sent:</h1><p><strong>Name: </strong>{{name}}</p><p><strong>City: </strong>{{city}}</p><p><strong>Description: </strong>{{description}}</p><p><strong>Email: </strong>{{email}}</p>", name=name, city=city, description=description, email=email)
+	if (email == "samulisuomi@yahoo.fi"): #TODO!!
+		mail.sendEmail(name, email) #TODO!!
+		return template("<h1>You sent:</h1><p><strong>Name: </strong>{{name}}</p><p><strong>City: </strong>{{city}}</p><p><strong>Description: </strong>{{description}}</p><p><strong>Email: </strong>{{email}}</p>", name=name, city=city, description=description, email=email)
+	else:
+		redirect("/")
+
+@app.route("/vahvista")
+def validateemail():
+	id = request.query.id
+	email = "samulisuomi@yahoo.fi" #TODO:
+	if (id == "123456789"):
+		return template("<p>Email address <strong>{{email}}</strong> was validated!", id=id, email=email)
+	else:
+		redirect("/")
 
 @app.error(404)
 def error404(error):
