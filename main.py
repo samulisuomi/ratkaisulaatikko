@@ -1,7 +1,7 @@
 from framework import bottle
 from framework.bottle import Bottle, TEMPLATE_PATH, route, template, error, request, debug, post, redirect, url, SimpleTemplate, static_file
 from google.appengine.ext.webapp.util import run_wsgi_app
-from py import mail
+from py import mail, dbfacade
 
 #Instead of supplying url in every handler, set up a template default
 SimpleTemplate.defaults["url"] = lambda x, **kwargs: SETTINGS.URL_BASE + url(x, **kwargs)
@@ -43,6 +43,7 @@ def validateemail():
 
 @app.route("/ratkaisusivu")
 def solutionpage():
+	bottle.debug(True)
 	return template("solutionpage.tpl")
 
 @app.error(404)
