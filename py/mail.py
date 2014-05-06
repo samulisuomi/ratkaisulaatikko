@@ -1,6 +1,7 @@
  # This Python file uses the following encoding: utf-8
 
 from google.appengine.api import mail
+from google.appengine.ext import db
 
 def sendConfirmationEmail(name, email):
 	mail.send_mail(sender="Ratkaisulaatikko <ratkaisulaatikko@ratkaisulaatikko.appspotmail.com>",
