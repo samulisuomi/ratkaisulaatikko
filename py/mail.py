@@ -8,7 +8,7 @@ class Problem(db.Model):
   description = db.Text(required=True) # description of problem
   owner = db.Key(required=True) # use existing user or create one
   offers = db.Text() #list of offers
-  chat = db.Text() # list of lists ? for user each comppany?
+  chat = db.Chat.Key() # list of keys to relevant Chat objects
 
 # class for modeling the person that has problems
 class Owner(db.Model):
