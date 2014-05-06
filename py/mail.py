@@ -3,6 +3,14 @@
 from google.appengine.api import mail
 from google.appengine.ext import db
 
+# Pari esimerkki modelii
+class Problem(db.Model):
+  description = db.Text(required=True) # description of problem
+  owner = db.Key(required=True) # use existing user or create one
+  offers = db.Text() #list of offers
+  chat = db.Text() # list of lists ? for user each cimppany?
+
+
 def sendConfirmationEmail(name, email):
 	mail.send_mail(sender="Ratkaisulaatikko <ratkaisulaatikko@ratkaisulaatikko.appspotmail.com>",
 	              to=name + " <" + email + ">",
