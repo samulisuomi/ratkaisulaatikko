@@ -25,7 +25,6 @@ class Provider(db.Model):
 class Chat(db.Model):
   #relevant parties
   problem = db.Problem.Key(required=True)
-  owner = db.Owner.Key(required=True)
   provider = db.Provider.Key(required=True)
   chat = db.Text() #list of chat
 
