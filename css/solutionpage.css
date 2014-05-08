@@ -1,0 +1,77 @@
+body {
+	background: url(/img/toolbox_corner.jpg);
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:right bottom;
+	background-size: 960px;
+	font-family: "Open Sans", sans-serif;
+}
+
+.panel {
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+.margin-base-vertical {
+	margin: 40px 0;
+}
+
+.container {
+	margin-top: 20px;
+}
+
+.some {
+	margin-left: 5px;
+	color: #333;
+}
+
+textarea {
+   resize: none;
+}
+
+input-lg {
+	width: 50%;
+}
+
+.btn-group {
+	margin-top: 10px;
+}
+
+#headerLogo {
+	height: 40px;
+}
+
+.offerCheckbox {
+	width: 20px;
+	height: 20px;
+}
+
+.table {
+	background-color: rgba(255,255,255,0.8);
+}
+
+.solutionHeaderPanel {
+	margin: 20px;
+	padding: 10px;
+	min-height: 120px;
+	min-width: 200px;
+}
+
+.btn-message {
+	background-color: rgba(255, 255, 255, 0.2);
+	height: 50px;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active {
+	background-color: rgba(0, 0, 0, 0.1);;
+}
+
+.restrictedColumn {
+	max-width: 130px;
+}
+
+.editButton {
+	margin: 4px;
+} 
