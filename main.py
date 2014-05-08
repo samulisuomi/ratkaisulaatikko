@@ -44,7 +44,14 @@ def validateemail():
 @app.route("/ratkaisusivu")
 def solutionpage():
 	bottle.debug(True)
-	return template("solutionpage.tpl")
+	#TODO:
+	id = request.query.id
+	if (id == "123456789demo"):
+		return template("solutionpage.tpl")
+	elif (id =="123456789"):
+		return template("solutionpage_empty.tpl")
+	else:
+		redirect("/")
 
 @app.error(404)
 def error404(error):
