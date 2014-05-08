@@ -46,9 +46,9 @@ def solutionpage():
 	bottle.debug(True)
 	#TODO:
 	id = request.query.id
-	if (id == "123456789demo"):
+	if (id == "a1b2c3d4e5demo"):
 		return template("solutionpage.tpl")
-	elif (id =="123456789"):
+	elif (id =="a1b2c3d4e5"):
 		return template("solutionpage_empty.tpl")
 	else:
 		redirect("/")
