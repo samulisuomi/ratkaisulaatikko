@@ -6,8 +6,9 @@ from google.appengine.ext import db
 # class for storing problems posted
 class Problem(db.Model):
   description = db.Text(required=True) # description of problem
+  location = db.StringProperty(required=True) #for location field
   owner = db.Key(required=True) # use existing user or create one
-  offers = db.Text() #list of offers
+  #offers = db.Text() #list of offers/ mybe not needed if chat model includes the offer
   chat = db.Chat.Key() # list of keys to relevant Chat objects
 
 # class for modeling the person that has problems
