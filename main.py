@@ -53,6 +53,16 @@ def solutionpage():
 	else:
 		redirect("/")
 
+@app.post("/ajax/getofferdetails")
+def getofferdetails():
+	bottle.debug(True)
+	offerid = request.forms.get('offerid')
+	#TODO: db
+	if (True):
+		return "<p>Rivin data-id: " + offerid + "</p>"
+	else:
+		return "<p>Error with retrieving information.</p>"
+
 @app.error(404)
 def error404(error):
     return template("404.tpl")

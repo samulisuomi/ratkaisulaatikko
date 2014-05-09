@@ -50,7 +50,7 @@
 			            <td class="restrictedColumn">Varsinais-Suomen Remonttifirma Oy</td>
 			            <td><button class="btn btn-default btn-message">Minkälainen seinämateriaali?</button></td>
 			            <td class="restrictedColumn">Urakalla 1000 €</td>
-			            <td class="text-center"><button class="btn btn-success" data-id="offerId0" data-toggle="modal" data-target="#offerModal">Tarkastele</button></td>
+			            <td class="text-center"><button class="btn btn-success btn-tarkastele" data-id="offerId0" data-toggle="modal" data-target="#offerModal">Tarkastele</button></td>
 			            <td class="text-center"><button class="btn btn-danger" id="rejectButton_rowId">Hylkää</button></td>
 	       			</tr>
 					<tr>
@@ -58,7 +58,7 @@
 			            <td class="restrictedColumn">Yrityksen nimi</td>
 			            <td><button class="btn btn-default btn-message">Soita 0401234567 niin puhutaan tarkemmin.</button></td>
 			            <td class="restrictedColumn">50 euroa tunti + tarvikkeet</td>
-			            <td class="text-center"><button class="btn btn-success" data-id="offerId1" data-toggle="modal" data-target="#offerModal">Tarkastele</button></td>
+			            <td class="text-center"><button class="btn btn-success btn-tarkastele" data-id="offerId1" data-toggle="modal" data-target="#offerModal">Tarkastele</button></td>
 			            <td class="text-center"><button class="btn btn-danger" id="rejectButton_rowId">Hylkää</button></td>
 	       			</tr>
 	       			<tr>
@@ -66,7 +66,7 @@
 			            <td class="restrictedColumn">Yrityksen nimi</td>
 			            <td><button class="btn btn-default btn-message">Soita 0401234567 niin puhutaan tarkemmin.</button></td>
 			            <td class="restrictedColumn">50 euroa tunti + tarvikkeet</td>
-			            <td class="text-center"><button class="btn btn-success" data-id="offerId2" data-toggle="modal" data-target="#offerModal">Tarkastele</button></td>
+			            <td class="text-center"><button class="btn btn-success btn-tarkastele" data-id="offerId2" data-toggle="modal" data-target="#offerModal">Tarkastele</button></td>
 			            <td class="text-center"><button class="btn btn-danger" id="rejectButton_rowId">Hylkää</button></td>
 	       			</tr>
 		        </tbody>
@@ -80,7 +80,7 @@
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				<h4 class="modal-title" id="offerModalLabel">Tarkastele tarjousta</h4>
 			  </div>
-			  <div class="modal-body idTest">
+			  <div class="modal-body">
 			  </div>
 			  <div class="modal-footer">
 			  	<button type="button" class="btn btn-success pull-left">Hyväksy tarjous</button>

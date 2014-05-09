@@ -4,7 +4,7 @@ $(document).ready(function(){
 	    trigger: "focus",
 	    width: "200px"
 	});
-	
+	/*
 	$('#offerModal').modal({
         keyboard: true,
         backdrop: "static",
@@ -15,4 +15,20 @@ $(document).ready(function(){
         //make your ajax call populate items or what even you need
         $(this).find('#idTest').html($('<b> Offer Id selected: ' + getIdFromRow  + '</b>'));
     });
+*/
+    $(document).on('click', '.btn-tarkastele', function(e) {
+    	e.preventDefault();
+
+    	$(".modal-body").html('');
+		$(".modal-body").addClass('loader');
+		$("#offerModal").modal('show')
+
+		$.post('ajax/getofferdetails',
+			{offerid: $(this).attr('data-id') },
+			function(html) {
+				$(".modal-body").removeClass('loader');
+				$(".modal-body").html(html);
+			}
+		);
+	});
 });

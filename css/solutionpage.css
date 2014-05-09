@@ -74,4 +74,11 @@ input-lg {
 
 .editButton {
 	margin: 4px;
-} 
+}
+
+.loader {
+	background-image: url(/img/ajax-loader.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 20px 20px;
+}
