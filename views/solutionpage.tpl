@@ -41,7 +41,6 @@
 		            <th>Uusin viesti</th>
 		            <th>Hinta-arvio</th>
 		            <th></th>
-		            <th></th>
 		          </tr>
 		        </thead>
 		        <tbody id="offerRows">
@@ -51,7 +50,6 @@
 			            <td>Meidän yrityksellämme on todennäköisesti tuolloin resursseja tehdä kyseinen...</td>
 			            <td class="restrictedColumn">Riippuu seinämateriaalista</td>
 			            <td class="text-center"><button class="btn btn-primary btn-tarkastele" data-id="offerId0" data-toggle="modal" data-target="#offerModal">Tarkastele</button></td>
-			            <td class="text-center"><button class="btn btn-danger" id="rejectButton_rowId">Hylkää</button></td>
 	       			</tr>
 					<tr>
 			            <td width="50px"><img src="img/default_company.png" width="50px" height="50px"></td>
@@ -59,7 +57,6 @@
 			            <td>Soita 0401234567 niin puhutaan tarkemmin.</td>
 			            <td class="restrictedColumn">50 euroa tunti + tarvikkeet</td>
 			            <td class="text-center"><button class="btn btn-primary btn-tarkastele" data-id="offerId1" data-toggle="modal" data-target="#offerModal">Tarkastele</button></td>
-			            <td class="text-center"><button class="btn btn-danger" id="rejectButton_rowId">Hylkää</button></td>
 	       			</tr>
 		        </tbody>
 		      </table>

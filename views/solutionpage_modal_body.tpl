@@ -15,7 +15,6 @@
 		<p>Riippuu seinämateriaalista</p>
 	</div>
 </div>
-<hr>
 <div class="row">
 	<div class="col-xs-offset-3 col-xs-6 text-center">
 		<div class="row">
@@ -26,6 +25,12 @@
 				<button type="button" class="btn btn-danger">Hylkää tarjous</button>
 			</div>
 		</div>
+	</div>
+</div>
+<hr>
+<div class="row text-center">
+	<div class="col-xs-12">
+		<p>Älä hylkää tarjousta saman tien: voitte viilata tarjousta käyttämällä keskustelutoimintoa.
 	</div>
 </div>
 <hr>
