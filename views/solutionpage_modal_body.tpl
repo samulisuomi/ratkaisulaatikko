@@ -29,7 +29,7 @@
 	</div>
 </div>
 <hr>
-%include("solutionpage_modal_message.tpl", type="company", date="12.5.2014 14:05", message="Viestiä asdasd asdad aad a asd asd asas dasd asd asd asd asdasd asd asasd.")
+%include("solutionpage_modal_message.tpl", type="company", date="12.5.2014 14:05", message="Meidän yrityksellämme on todennäköisesti tuolloin resursseja tehdä kyseinen maalausurakka. Pystytkö ilmoittamaan joitain lisätietoja kohteesta, muun muassa seinien tyypin?")
 <hr>
 <div class="row">
 	<div class="col-xs-7 pull-right">

@@ -21,17 +21,18 @@ if __name__=="__main__":
 def home():
 	return template("index.tpl")
 
+@app.route("/demo")
+def demo():
+	return template("demoinstructions.tpl")
+
 @app.route('/postaproblem', method='POST')
 def postaproblem():
 	name = request.forms.get('name')
 	city = request.forms.get('city')
 	description = request.forms.get('description')
 	email = request.forms.get('email')
-	if ((name == "LeanSoftwareStartup") or (email == "samulisuomi@yahoo.fi")): #TODO!!
-		mail.sendConfirmationEmail(name, email) #TODO!!
-		return template("postaproblem.tpl", email=email)
-	else:
-		redirect("/")
+	mail.sendConfirmationEmail(name, email) #TODO!!
+	return template("postaproblem.tpl", email=email)
 
 @app.route("/vahvista")
 def validateemail():
