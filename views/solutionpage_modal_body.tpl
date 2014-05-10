@@ -5,14 +5,14 @@
 				<img src="img/default_company.png" width="50px" height="50px">
 			</div>
 			<div class="col-xs-8">
-				<h4>Yrityksen nimi</h4>
+				<h4>Varsinais-Suomen Remonttifirma Oy</h4>
 				<p>Osoite<br>Puhelin<br>Email<br>Y-tunnus</p>
 			</div>
 		</div>
 	</div>
 	<div class="col-xs-6">
 		<h4><strong>Alustava hinta-arvio:</strong></h4>
-		<p>Testi</p>
+		<p>Riippuu seinämateriaalista</p>
 	</div>
 </div>
 <hr>
@@ -29,7 +29,8 @@
 	</div>
 </div>
 <hr>
-%include("solutionpage_modal_message.tpl", type="company", date="12.5.2014 14:05", message="Meidän yrityksellämme on todennäköisesti tuolloin resursseja tehdä kyseinen maalausurakka. Pystytkö ilmoittamaan joitain lisätietoja kohteesta, muun muassa seinien tyypin?")
+%include("solutionpage_modal_message.tpl", type="company", date="12.5.2014 14:05", message="Meidän yrityksellämme on todennäköisesti tuolloin resursseja tehdä kyseinen maalausurakka. Pystytkö ilmoittamaan joitain lisätietoja kohteesta, muun muassa seinien tyypin? Tulemme joka tapauksessa kyllä paikan päälle kurkkaamaan tilanteen ennen urakasta sopimista.")
+%include("solutionpage_modal_message.tpl", type="user", date="12.5.2014 17:25", message="Rintamamiestalo kyseessä, neliöitä tosiaan nuo 100 m2 kolmessa kerroksessa. Koska pystyisitte tulemaan paikalle katsomaan? Olen joka toinen viikko iltavuorossa, joten silloin sopisi myös päiväsaikaan.")
 <hr>
 <div class="row">
 	<div class="col-xs-7 pull-right">

@@ -38,7 +38,7 @@
 		          <tr>
 		            <th></th>
 		            <th>Yritys</th>
-		            <th></th>
+		            <th>Uusin viesti</th>
 		            <th>Hinta-arvio</th>
 		            <th></th>
 		            <th></th>
@@ -48,25 +48,17 @@
 					<tr>
 			            <td width="50px"><img src="img/default_company.png" width="50px" height="50px"></td>
 			            <td class="restrictedColumn">Varsinais-Suomen Remonttifirma Oy</td>
-			            <td>Minkälainen seinämateriaali?</td>
-			            <td class="restrictedColumn">Urakalla 1000 €</td>
+			            <td>Meidän yrityksellämme on todennäköisesti tuolloin resursseja tehdä kyseinen...</td>
+			            <td class="restrictedColumn">Riippuu seinämateriaalista</td>
 			            <td class="text-center"><button class="btn btn-primary btn-tarkastele" data-id="offerId0" data-toggle="modal" data-target="#offerModal">Tarkastele</button></td>
 			            <td class="text-center"><button class="btn btn-danger" id="rejectButton_rowId">Hylkää</button></td>
 	       			</tr>
 					<tr>
 			            <td width="50px"><img src="img/default_company.png" width="50px" height="50px"></td>
-			            <td class="restrictedColumn">Yrityksen nimi</td>
+			            <td class="restrictedColumn">Peran Remppa Tmi</td>
 			            <td>Soita 0401234567 niin puhutaan tarkemmin.</td>
 			            <td class="restrictedColumn">50 euroa tunti + tarvikkeet</td>
 			            <td class="text-center"><button class="btn btn-primary btn-tarkastele" data-id="offerId1" data-toggle="modal" data-target="#offerModal">Tarkastele</button></td>
-			            <td class="text-center"><button class="btn btn-danger" id="rejectButton_rowId">Hylkää</button></td>
-	       			</tr>
-	       			<tr>
-			            <td width="50px"><img src="img/default_company.png" width="50px" height="50px"></td>
-			            <td class="restrictedColumn">Yrityksen nimi</td>
-			            <td>Soita 0401234567 niin puhutaan tarkemmin.</td>
-			            <td class="restrictedColumn">50 euroa tunti + tarvikkeet</td>
-			            <td class="text-center"><button class="btn btn-primary btn-tarkastele" data-id="offerId2" data-toggle="modal" data-target="#offerModal">Tarkastele</button></td>
 			            <td class="text-center"><button class="btn btn-danger" id="rejectButton_rowId">Hylkää</button></td>
 	       			</tr>
 		        </tbody>
