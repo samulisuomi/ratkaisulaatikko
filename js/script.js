@@ -28,7 +28,10 @@ $(document).ready(function(){
 			function(html) {
 				$(".modal-body").removeClass('loader');
 				$(".modal-body").html(html);
+				$(".userMessageDiv").addClass("text-right");
 			}
 		);
 	});
+
+
 });

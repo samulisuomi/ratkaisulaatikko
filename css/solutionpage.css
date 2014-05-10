@@ -82,3 +82,19 @@ input-lg {
 	background-position: center;
 	background-size: 20px 20px;
 }
+
+.modalCompanyLogo {
+	margin-right: 24px;	
+}
+
+.companyMessageDiv {
+	margin-right: 50px;
+}
+
+.userMessageDiv {
+	margin-left: 50px;
+}
+
+.user-heading {
+	background-color: #d8f5fe !important;
+}
