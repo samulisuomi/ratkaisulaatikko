@@ -1,4 +1,4 @@
-%include("main_header.tpl")
+%include("main_header.tpl", style="style")
 		<div class="container boxContainer">
 			<div class="row vertical-center-row">
 
