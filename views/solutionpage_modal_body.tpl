@@ -1,5 +1,4 @@
 <div class="row">
-
 	<div class="col-xs-6">
 		<div class="row">
 			<div class="col-xs-2 modalCompanyLogo">
@@ -7,6 +6,7 @@
 			</div>
 			<div class="col-xs-8">
 				<h4>Yrityksen nimi</h4>
+				<p>Osoite<br>Puhelin<br>Email<br>Y-tunnus</p>
 			</div>
 		</div>
 	</div>
@@ -16,15 +16,28 @@
 	</div>
 </div>
 <hr>
-<div class="panel panel-default panel-message companyMessageDiv">
-  <div class="panel-heading company-heading">12.5.2014 14:00</div>
-  <div class="panel-body">
-    Viestiä asdasd asdad aad a asd asd asas dasd asd asd asd asdasd asd asasd.
-  </div>
+<div class="row">
+	<div class="col-xs-offset-3 col-xs-6 text-center">
+		<div class="row">
+			<div class="col-md-6">
+				<button type="button" class="btn btn-success">Hyväksy tarjous</button>
+			</div>
+			<div class="col-md-6">
+				<button type="button" class="btn btn-danger">Hylkää tarjous</button>
+			</div>
+		</div>
+	</div>
 </div>
-<div class="panel panel-default panel-message userMessageDiv">
-  <div class="panel-heading user-heading">12.5.2014 14:00</div>
-  <div class="panel-body">
-    Viestiä asdasd asdad aad a asd asd asas dasd asd asd asd asdasd asd asasd.
-  </div>
+<hr>
+%include("solutionpage_modal_message.tpl", type="company", date="12.5.2014 14:05", message="Viestiä asdasd asdad aad a asd asd asas dasd asd asd asd asdasd asd asasd.")
+<hr>
+<div class="row">
+	<div class="col-xs-7 pull-right">
+		<form class="form-inline" role="form" action="">
+			<div class="form-group">
+				<textarea class="form-control" rows="2" id="messageArea" placeholder="Kirjoita viestisi tähän."></textarea>
+			</div>
+				<button type="submit" id="submitMessage" class="btn btn-primary">Lähetä</button>
+		</form>
+	</div>
 </div>

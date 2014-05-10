@@ -38,7 +38,7 @@
 		          <tr>
 		            <th></th>
 		            <th>Yritys</th>
-		            <th>Uusin viesti</th>
+		            <th></th>
 		            <th>Hinta-arvio</th>
 		            <th></th>
 		            <th></th>
@@ -48,25 +48,25 @@
 					<tr>
 			            <td width="50px"><img src="img/default_company.png" width="50px" height="50px"></td>
 			            <td class="restrictedColumn">Varsinais-Suomen Remonttifirma Oy</td>
-			            <td><button class="btn btn-default btn-message">Minkälainen seinämateriaali?</button></td>
+			            <td>Minkälainen seinämateriaali?</td>
 			            <td class="restrictedColumn">Urakalla 1000 €</td>
-			            <td class="text-center"><button class="btn btn-success btn-tarkastele" data-id="offerId0" data-toggle="modal" data-target="#offerModal">Tarkastele</button></td>
+			            <td class="text-center"><button class="btn btn-primary btn-tarkastele" data-id="offerId0" data-toggle="modal" data-target="#offerModal">Tarkastele</button></td>
 			            <td class="text-center"><button class="btn btn-danger" id="rejectButton_rowId">Hylkää</button></td>
 	       			</tr>
 					<tr>
 			            <td width="50px"><img src="img/default_company.png" width="50px" height="50px"></td>
 			            <td class="restrictedColumn">Yrityksen nimi</td>
-			            <td><button class="btn btn-default btn-message">Soita 0401234567 niin puhutaan tarkemmin.</button></td>
+			            <td>Soita 0401234567 niin puhutaan tarkemmin.</td>
 			            <td class="restrictedColumn">50 euroa tunti + tarvikkeet</td>
-			            <td class="text-center"><button class="btn btn-success btn-tarkastele" data-id="offerId1" data-toggle="modal" data-target="#offerModal">Tarkastele</button></td>
+			            <td class="text-center"><button class="btn btn-primary btn-tarkastele" data-id="offerId1" data-toggle="modal" data-target="#offerModal">Tarkastele</button></td>
 			            <td class="text-center"><button class="btn btn-danger" id="rejectButton_rowId">Hylkää</button></td>
 	       			</tr>
 	       			<tr>
 			            <td width="50px"><img src="img/default_company.png" width="50px" height="50px"></td>
 			            <td class="restrictedColumn">Yrityksen nimi</td>
-			            <td><button class="btn btn-default btn-message">Soita 0401234567 niin puhutaan tarkemmin.</button></td>
+			            <td>Soita 0401234567 niin puhutaan tarkemmin.</td>
 			            <td class="restrictedColumn">50 euroa tunti + tarvikkeet</td>
-			            <td class="text-center"><button class="btn btn-success btn-tarkastele" data-id="offerId2" data-toggle="modal" data-target="#offerModal">Tarkastele</button></td>
+			            <td class="text-center"><button class="btn btn-primary btn-tarkastele" data-id="offerId2" data-toggle="modal" data-target="#offerModal">Tarkastele</button></td>
 			            <td class="text-center"><button class="btn btn-danger" id="rejectButton_rowId">Hylkää</button></td>
 	       			</tr>
 		        </tbody>
@@ -83,8 +83,6 @@
 			  <div class="modal-body">
 			  </div>
 			  <div class="modal-footer">
-			  	<button type="button" class="btn btn-success pull-left">Hyväksy tarjous</button>
-				<button type="button" class="btn btn-danger pull-left">Hylkää tarjous</button>
 				<button type="button" class="btn btn-default" data-dismiss="modal">Sulje</button>
 			  </div>
 			</div>

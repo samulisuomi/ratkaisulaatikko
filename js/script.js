@@ -33,5 +33,8 @@ $(document).ready(function(){
 		);
 	});
 
+    $("textarea.expand").focus(function () {
+	    $(this).animate({rows: 10}, 500); 
+	});
 
 });

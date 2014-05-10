@@ -98,3 +98,7 @@ input-lg {
 .user-heading {
 	background-color: #d8f5fe !important;
 }
+
+#submitMessage {
+	margin-left: 20px;
+}
