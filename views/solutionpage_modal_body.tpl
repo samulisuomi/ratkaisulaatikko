@@ -5,8 +5,8 @@
 				<img src="img/default_company.png" width="50px" height="50px">
 			</div>
 			<div class="col-xs-8">
-				<h4>Varsinais-Suomen Remonttifirma Oy</h4>
-				<p>Osoite<br>Puhelin<br>Email<br>Y-tunnus</p>
+				<h4><a href="/yritystiedot?id=yrityksenid">Varsinais-Suomen Remonttifirma Oy</a></h4>
+				<p>Osoite<br>Puhelin<br>Email<br>Kotisivut</p>
 			</div>
 		</div>
 	</div>
@@ -30,7 +30,8 @@
 <hr>
 <div class="row text-center">
 	<div class="col-xs-12">
-		<p>Älä hylkää tarjousta saman tien: voitte viilata tarjousta käyttämällä keskustelutoimintoa.
+		<p><strong>Älä hylkää tarjousta saman tien!</strong></p>
+		<p>Voitte koittaa päästä yhteisymmärrykseen keskustelutoiminnon avulla.</P>
 	</div>
 </div>
 <hr>

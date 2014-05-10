@@ -1,4 +1,6 @@
 $(document).ready(function(){
+	updateOfferList();
+	
 	$('[rel=tooltip]').tooltip({
 	    placement: "top",
 	    trigger: "focus",
@@ -33,8 +35,21 @@ $(document).ready(function(){
 		);
 	});
 
-    $("textarea.expand").focus(function () {
-	    $(this).animate({rows: 10}, 500); 
-	});
-
 });
+
+function updateOfferList() {
+	    $(".offerZone").html('');
+		$(".offerZone").addClass('loader');
+		currentProblemId = getURLParameter('id');
+		$.post('ajax/getofferlist',
+			{problemid: "a1b2c3d4e5" },
+			function(html) {
+				$(".offerZone").removeClass('loader');
+				$(".offerZone").html(html);
+			}
+		);
+}
+
+function getURLParameter(name) {
+  return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
+}

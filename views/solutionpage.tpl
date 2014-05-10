@@ -32,34 +32,7 @@
 					<h4>Saamasi tarjoukset:</h4>
 				</div>
 			</div>
-			<div class="table-responsive">
-		      <table class="table">
-		        <thead>
-		          <tr>
-		            <th></th>
-		            <th>Yritys</th>
-		            <th>Uusin viesti</th>
-		            <th>Hinta-arvio</th>
-		            <th></th>
-		          </tr>
-		        </thead>
-		        <tbody id="offerRows">
-					<tr>
-			            <td width="50px"><img src="img/default_company.png" width="50px" height="50px"></td>
-			            <td class="restrictedColumn">Varsinais-Suomen Remonttifirma Oy</td>
-			            <td>Meidän yrityksellämme on todennäköisesti tuolloin resursseja tehdä kyseinen...</td>
-			            <td class="restrictedColumn">Riippuu seinämateriaalista</td>
-			            <td class="text-center"><button class="btn btn-primary btn-tarkastele" data-id="offerId0" data-toggle="modal" data-target="#offerModal">Tarkastele</button></td>
-	       			</tr>
-					<tr>
-			            <td width="50px"><img src="img/default_company.png" width="50px" height="50px"></td>
-			            <td class="restrictedColumn">Peran Remppa Tmi</td>
-			            <td>Soita 0401234567 niin puhutaan tarkemmin.</td>
-			            <td class="restrictedColumn">50 euroa tunti + tarvikkeet</td>
-			            <td class="text-center"><button class="btn btn-primary btn-tarkastele" data-id="offerId1" data-toggle="modal" data-target="#offerModal">Tarkastele</button></td>
-	       			</tr>
-		        </tbody>
-		      </table>
+			<div class="offerZone">
 			</div>
 		</div>
 		<div class="modal fade" id="offerModal" tabindex="-1" role="dialog" aria-labelledby="offerModalLabel" aria-hidden="true">

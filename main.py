@@ -60,17 +60,30 @@ def solutionpage():
 def getofferdetails():
 	bottle.debug(True)
 	offerid = request.forms.get('offerid')
+	#TODO: db
 	chat = [
 		["yrityksenid", "12.5.2014 14:00", "Yrityksen kirjoittama ensimmäinen viesti"],
 		["kayttajanid", "12.5.2014 17:31", "Käyttäjän viesti"],
 		["yrityksenid", "13.5.2014 8:20", "Yrityksen kirjoittama toinen viesti"],
 		["kayttajanid", "13.5.2014 15:25", "Käyttäjän viesti"]
 	]
-	#TODO: db
 	if (True):
 		return template("solutionpage_modal_body")
 	else:
 		return "<p>Error with retrieving information.</p>"
+
+@app.post("/ajax/getofferlist")
+def getofferlist():
+	bottle.debug(True)
+	problemid = request.forms.get('problemid')
+	offers = [
+		["yrityksenid1", "Varsinais-Suomen Remontit Oy", "Ensimmäisen viestin ensimmäiset 64 kirjainta", "hinta-arvio"],
+		["yrityksenid2", "Peran Remppa T:mi", "Ensimmäisen viestin ensimmäiset 64 kirjainta", "hinta-arvio"]
+	]
+	if (len(offers)>0):
+		return template("solutionpage_offers_table")
+	else:
+		return template("solutuonpage_offers_table_empty")
 
 @app.error(404)
 def error404(error):
