@@ -5,16 +5,16 @@
 				<img src="img/default_company.png" width="50px" height="50px">
 			</div>
 			<div class="col-xs-8">
-				<h4><a href="/yritystiedot?id=yrityksenid">Varsinais-Suomen Remonttifirma Oy</a></h4>
-				<p>Osoite<br>Puhelin<br>Email<br>Kotisivut</p>
+				<h4><a href="/yritystiedot?id={{companyid}}">{{name}}</a></h4>
 			</div>
 		</div>
 	</div>
 	<div class="col-xs-6">
 		<h4><strong>Alustava hinta-arvio:</strong></h4>
-		<p>Riippuu seinämateriaalista</p>
+		<p>{{price}}</p>
 	</div>
 </div>
+<hr>
 <div class="row">
 	<div class="col-xs-offset-3 col-xs-6 text-center">
 		<div class="row">
@@ -27,16 +27,16 @@
 		</div>
 	</div>
 </div>
-<hr>
-<div class="row text-center">
+<div class="row text-center disclaimermargin">
 	<div class="col-xs-12">
 		<p><strong>Älä hylkää tarjousta saman tien!</strong></p>
 		<p>Voitte koittaa päästä yhteisymmärrykseen keskustelutoiminnon avulla.</P>
 	</div>
 </div>
 <hr>
-%include("solutionpage_modal_message.tpl", type="company", date="12.5.2014 14:05", message="Meidän yrityksellämme on todennäköisesti tuolloin resursseja tehdä kyseinen maalausurakka. Pystytkö ilmoittamaan joitain lisätietoja kohteesta, muun muassa seinien tyypin? Tulemme joka tapauksessa kyllä paikan päälle kurkkaamaan tilanteen ennen urakasta sopimista.")
-%include("solutionpage_modal_message.tpl", type="user", date="12.5.2014 17:25", message="Rintamamiestalo kyseessä, neliöitä tosiaan nuo 100 m2 kolmessa kerroksessa. Koska pystyisitte tulemaan paikalle katsomaan? Olen joka toinen viikko iltavuorossa, joten silloin sopisi myös päiväsaikaan.")
+%for item in chat:
+	%include("solutionpage_modal_message.tpl", type=item[1], date=item[2], message=item[3])
+%end
 <hr>
 <div class="row">
 	<div class="col-xs-7 pull-right">

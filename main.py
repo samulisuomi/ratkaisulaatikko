@@ -4,6 +4,7 @@ from framework import bottle
 from framework.bottle import Bottle, TEMPLATE_PATH, route, template, error, request, debug, post, redirect, url, SimpleTemplate, static_file
 from google.appengine.ext.webapp.util import run_wsgi_app
 from py import mail, dbfacade
+import logging
 
 #Instead of supplying url in every handler, set up a template default
 SimpleTemplate.defaults["url"] = lambda x, **kwargs: SETTINGS.URL_BASE + url(x, **kwargs)
@@ -60,15 +61,18 @@ def solutionpage():
 def getofferdetails():
 	bottle.debug(True)
 	offerid = request.forms.get('offerid')
-	#TODO: db
+	#TODO: db (tietoja kyseisestä offerista)
+	companyid = "a1b2c3d4e5001"
+	name = "Varsinais-Suomen Remontit Oy"
+	price = "Riippuu seinämateriaalista"
+
 	chat = [
-		["yrityksenid", "12.5.2014 14:00", "Yrityksen kirjoittama ensimmäinen viesti"],
-		["kayttajanid", "12.5.2014 17:31", "Käyttäjän viesti"],
-		["yrityksenid", "13.5.2014 8:20", "Yrityksen kirjoittama toinen viesti"],
-		["kayttajanid", "13.5.2014 15:25", "Käyttäjän viesti"]
+		["001", "company", "12.5.2014 14:00", "Meidän yrityksellämme on todennäköisesti tuolloin resursseja tehdä kyseinen maalausurakka. Pystytkö ilmoittamaan joitain lisätietoja kohteesta, muun muassa seinien tyypin? Tulemme joka tapauksessa kyllä paikan päälle kurkkaamaan tilanteen ennen urakasta sopimista."],
+		["kayttajanid", "user", "12.5.2014 17:31", "Rintamamiestalo kyseessä, neliöitä tosiaan nuo 100 m2 kolmessa kerroksessa. Koska pystyisitte tulemaan paikalle katsomaan? Olen joka toinen viikko iltavuorossa, joten silloin sopisi myös päiväsaikaan."]
 	]
+
 	if (True):
-		return template("solutionpage_modal_body")
+		return template("solutionpage_modal_body", companyid=companyid, name=name, price=price, chat=chat)
 	else:
 		return "<p>Error with retrieving information.</p>"
 
@@ -76,14 +80,21 @@ def getofferdetails():
 def getofferlist():
 	bottle.debug(True)
 	problemid = request.forms.get('problemid')
+	logging.getLogger().setLevel(logging.DEBUG)
+	logging.info(problemid)
+
 	offers = [
-		["yrityksenid1", "Varsinais-Suomen Remontit Oy", "Ensimmäisen viestin ensimmäiset 64 kirjainta", "hinta-arvio"],
-		["yrityksenid2", "Peran Remppa T:mi", "Ensimmäisen viestin ensimmäiset 64 kirjainta", "hinta-arvio"]
+		["a1b2c3d4e5001", "001", "Varsinais-Suomen Remontit Oy", "Ensimmäisen viestin ensimmäiset 64 kirjainta", "Riippuu seinämateriaalista"],
+		["a1b2c3d4e5002", "002", "Peran Remppa T:mi", "Ensimmäisen viestin ensimmäiset 64 kirjainta", "50 euroa tunti + tarvikkeet"]
 	]
 	if (len(offers)>0):
-		return template("solutionpage_offers_table")
+		return template("solutionpage_offers_table", offers=offers)
 	else:
 		return template("solutuonpage_offers_table_empty")
+
+@app.route("/yritystiedot")
+def yritystiedot():
+	return "<p>This page has not yet been implemented</p>"
 
 @app.error(404)
 def error404(error):

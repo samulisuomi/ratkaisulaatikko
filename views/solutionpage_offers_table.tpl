@@ -10,8 +10,9 @@
 		  </tr>
 		</thead>
 		<tbody id="offerRows">
-			%include("solutionpage_offers_table_row", name="Varsinais-Suomen Remonttifirma Oy", latestmessage="Meidän yrityksellämme on todennäköisesti tuolloin resursseja tehdä kyseinen...", price="Riippuu seinämateriaalista", offerId="offerId1")
-			%include("solutionpage_offers_table_row", name="Peran Remppa Tmi", latestmessage="Soita 0401234567 niin puhutaan tarkemmin.", price="50 euroa tunti + tarvikkeet", offerId="offerId2")
+			%for item in offers:
+				%include("solutionpage_offers_table_row", offerId=item[0], yrityksenid=item[1], name=item[2], latestmessage=item[3], price=item[4])
+			%end
 		</tbody>
 	</table>
 </div>

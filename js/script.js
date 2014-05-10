@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	updateOfferList();
-	
+
 	$('[rel=tooltip]').tooltip({
 	    placement: "top",
 	    trigger: "focus",
@@ -42,7 +42,7 @@ function updateOfferList() {
 		$(".offerZone").addClass('loader');
 		currentProblemId = getURLParameter('id');
 		$.post('ajax/getofferlist',
-			{problemid: "a1b2c3d4e5" },
+			{problemid: currentProblemId },
 			function(html) {
 				$(".offerZone").removeClass('loader');
 				$(".offerZone").html(html);
