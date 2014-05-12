@@ -40,7 +40,7 @@
 <hr>
 <div class="row">
 	<div class="col-xs-7 pull-right">
-		<form class="form-inline" role="form" action="">
+		<form class="form-inline" id="newMessageForm" role="form">
 			<div class="form-group">
 				<textarea class="form-control" rows="2" id="messageArea" placeholder="Kirjoita viestisi tähän."></textarea>
 			</div>
