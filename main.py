@@ -50,43 +50,30 @@ def solutionpage():
 	bottle.debug(True)
 	#TODO:
 	id = request.query.id
-	if (id == "a1b2c3d4e5demo"):
-		return template("solutionpage.tpl")
-	elif (id =="a1b2c3d4e5"):
-		return template("solutionpage_empty.tpl")
+	if (dbfacade.problemIdIsLegit(id)):
+		return template("solutionpage.tpl", ownername=dbfacade.getProblemOwnerName(id), ownerlocation=dbfacade.getProblemOwnerLocation(id), owneremail=dbfacade.getProblemOwnerEmail(id), problemdescription=dbfacade.getProblemDescription(id))
 	else:
-		redirect("/")
+		return("<p>You entered an invalid problem ID!</p><p><a href=\"/\">To the front page</a></p>")
 
 @app.post("/ajax/getofferdetails")
 def getofferdetails():
 	bottle.debug(True)
-	offerid = request.forms.get('offerid')
+	offerId = request.forms.get('offerid')
 	#TODO: db (tietoja kyseisestä offerista)
-	companyid = "a1b2c3d4e5001"
-	name = "Varsinais-Suomen Remontit Oy"
-	price = "Riippuu seinämateriaalista"
-
-	chat = [
-		["001", "company", "12.5.2014 14:00", "Meidän yrityksellämme on todennäköisesti tuolloin resursseja tehdä kyseinen maalausurakka. Pystytkö ilmoittamaan joitain lisätietoja kohteesta, muun muassa seinien tyypin? Tulemme joka tapauksessa kyllä paikan päälle kurkkaamaan tilanteen ennen urakasta sopimista."],
-		["kayttajanid", "user", "12.5.2014 17:31", "Rintamamiestalo kyseessä, neliöitä tosiaan nuo 100 m2 kolmessa kerroksessa. Koska pystyisitte tulemaan paikalle katsomaan? Olen joka toinen viikko iltavuorossa, joten silloin sopisi myös päiväsaikaan."]
-	]
-
-	if (True):
-		return template("solutionpage_modal_body", companyid=companyid, name=name, price=price, chat=chat)
-	else:
-		return "<p>Error with retrieving information.</p>"
+	companyId = dbfacade.getCompanyId(offerId)
+	companyName = dbfacade.getCompanyName(companyId)
+	price = dbfacade.getOfferPrice(offerId)
+	chat = dbfacade.getChatMessages(offerId)
+	return template("solutionpage_modal_body", companyid=companyId, name=companyName, price=price, chat=chat)
 
 @app.post("/ajax/getofferlist")
 def getofferlist():
 	bottle.debug(True)
-	problemid = request.forms.get('problemid')
+	problemId = request.forms.get('problemid')
 	logging.getLogger().setLevel(logging.DEBUG)
-	logging.info(problemid)
+	logging.info(problemId)
+	offers = dbfacade.getOffers(problemId)
 
-	offers = [
-		["a1b2c3d4e5001", "001", "Varsinais-Suomen Remontit Oy", "Ensimmäisen viestin ensimmäiset 64 kirjainta", "Riippuu seinämateriaalista"],
-		["a1b2c3d4e5002", "002", "Peran Remppa T:mi", "Ensimmäisen viestin ensimmäiset 64 kirjainta", "50 euroa tunti + tarvikkeet"]
-	]
 	if (len(offers)>0):
 		return template("solutionpage_offers_table", offers=offers)
 	else:

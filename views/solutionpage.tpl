@@ -15,13 +15,13 @@
 			<div class="row">
 				<div class="col-xs-3 panel panel-default solutionHeaderPanel">
 						<p><button class="btn editButton btn-default btn-sm pull-right"><i class="fa fa-pencil fa-2x"></i></button></p>
-						<p>Samuli Suomi</p>
-						<p>Turku</p>
-						<p>samulisuomi@yahoo.fi</p>
+						<p>{{ownername}}</p>
+						<p>{{ownerlocation}}</p>
+						<p>{{owneremail}}</p>
 				</div>
 				<div class="col-xs-8 panel panel-default solutionHeaderPanel">
 						<p><button class="btn editButton btn-default btn-sm pull-right"><i class="fa fa-pencil fa-2x"></i></button></p>
-						<p>100 m2 omakotitalo täytyisi maalata kesäkuussa. Edellisestä maalauksesta on aikaa 20 vuotta.</p>
+						<p>{{problemdescription}}</p>
 				</div>
 			</div>
 			<div class="row text-left">
