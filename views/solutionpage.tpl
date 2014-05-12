@@ -7,12 +7,9 @@
 		<div class="container">
                
 	        <div class="row">
-	        		<p class="col-xs-8"><a href="/"><img id="headerLogo" src="img/ratkaisulaatikko.png"></a></p>
-		        	<div class="col-xs-4">
-		        		<div class="row text-right">
-			        		<p class="col-sm-6">KIRJAUDU</p>
-			                <p class="col-sm-6">LISÄTIETOJA</p>
-			            </div>
+	        		<div class="col-sm-8"><a href="/"><img id="headerLogo" src="img/ratkaisulaatikko.png"></a></div>
+		        	<div class="col-sm-4 text-right">
+		        		<p><span class="headerLink">KIRJAUDU</span><span class="headerLink">LISÄTIETOJA</span></p>
 			        </div>
 	        </div>
 			<div class="row">
