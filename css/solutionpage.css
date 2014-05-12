@@ -68,10 +68,6 @@ input-lg {
 	background-color: rgba(0, 0, 0, 0.1);;
 }
 
-.restrictedColumn {
-	max-width: 130px;
-}
-
 .editButton {
 	margin: 4px;
 }
@@ -109,4 +105,9 @@ input-lg {
 
 .headerLink {
 	margin-right: 24px;
+}
+
+.btn-tarkastele {
+	margin-left: 24px;
+	margin-right: 12px;
 }

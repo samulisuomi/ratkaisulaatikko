@@ -67,8 +67,8 @@ def getShortLatestMessage(offerId):
 			latestMessage = messages[i][3]
 		i = i - 1
 	
-	if len(latestMessage) > 100:
-		return latestMessage[:97] + "..."
+	if len(latestMessage) > 160:
+		return latestMessage[:157] + "..."
 	else: 
 		return latestMessage
 
