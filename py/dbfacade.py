@@ -82,8 +82,7 @@ def problemIdIsLegit(problemId):
 
 def getOffers(problemId):
 	if (problemId == "a1b2c3d4e5"):
-		offers = []
-		return offers
+		return []
 	elif (problemId == "a1b2c3d4e5demo"):
 		# TODO: get actual offer id list from somewhere
 		offers = [

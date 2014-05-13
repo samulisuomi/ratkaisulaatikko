@@ -74,10 +74,10 @@ def getofferlist():
 	logging.info(problemId)
 	offers = dbfacade.getOffers(problemId)
 
-	if (len(offers)>0):
-		return template("solutionpage_offers_table", offers=offers)
+	if not offers:
+		return template("solutionpage_offers_table_empty")
 	else:
-		return template("solutuonpage_offers_table_empty")
+		return template("solutionpage_offers_table", offers=offers)
 
 @app.route("/yritystiedot")
 def yritystiedot():
