@@ -30,7 +30,7 @@ $(document).ready(function(){
 });
 
 function updateOfferList() {
-	    $(".offerZone").html('');
+	    $(".offerZone").html('Ladataan...');
 		$(".offerZone").addClass('loader');
 		currentProblemId = getURLParameter('id');
 		$.post('ajax/getofferlist',
