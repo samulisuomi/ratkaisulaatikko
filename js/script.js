@@ -8,17 +8,8 @@ $(document).ready(function(){
 	});
 
 	$("#newMessageForm").submit(function(e){
-	    var form = $(this);
-	    $.ajax({ 
-	         url   : form.attr('action'),
-	         type  : form.attr('method'),
-	         data  : form.serialize(), // data to be submitted
-	         success: function(response){
-	            alert(response); // do what you like with the response
-	         }
-	    });
-	    return false;
-	 });
+    	e.preventDefault();
+	});
 
     $(document).on('click', '.btn-tarkastele', function(e) {
     	e.preventDefault();
@@ -39,7 +30,7 @@ $(document).ready(function(){
 });
 
 function updateOfferList() {
-	    $(".offerZone").html('Ladataan...');
+	    $(".offerZone").html('');
 		$(".offerZone").addClass('loader');
 		currentProblemId = getURLParameter('id');
 		$.post('ajax/getofferlist',
