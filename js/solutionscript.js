@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	updateOfferList();
 
 	$('[rel=tooltip]').tooltip({
 	    placement: "top",
