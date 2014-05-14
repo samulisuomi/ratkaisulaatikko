@@ -75,6 +75,7 @@ def getofferlist():
 	offers = dbfacade.getOffers(problemId)
 
 	if not offers:
+		mail.tempSendNewOffersNotification()
 		return template("solutionpage_offers_table_empty")
 	else:
 		return template("solutionpage_offers_table", offers=offers)

@@ -35,3 +35,21 @@ def sendSolutionPageLink(name, email):
 	Terveisin,
 	Ratkaisulaatikko
 	""")
+
+def tempSendNewOffersNotification():
+	sendNewOffersNotification("Samuli Suomi", "samulisuomi@yahoo.fi")
+
+def sendNewOffersNotification(name, email):
+	mail.send_mail(sender="Ratkaisulaatikko <ratkaisulaatikko@ratkaisulaatikko.appspotmail.com>",
+              to=name + " <" + email + ">",
+              subject="Uusia tarjouksia ongelmaasi! - Ratkaisulaatikko",
+              body="""
+	Hei,
+
+	Olet saanut uusia tarjouksia ongelmaasi. Voit tarkastella niitä ratkaisusivullasi:
+
+	http://ratkaisulaatikko.appspot.com/ratkaisusivu?id=a1b2c3d4e5demo
+
+	Terveisin,
+	Ratkaisulaatikko
+	""")
