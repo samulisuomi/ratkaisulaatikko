@@ -80,6 +80,11 @@ def getofferlist():
 	else:
 		return template("solutionpage_offers_table", offers=offers)
 
+@app.route('/ajax/sendnewmessage', method='POST')
+def postaproblem():
+	return "<p>True</p>"
+
+
 @app.route("/yritystiedot")
 def yritystiedot():
 	return "<p>This page has not yet been implemented</p>"

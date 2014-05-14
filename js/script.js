@@ -7,10 +7,18 @@ $(document).ready(function(){
 	    width: "200px"
 	});
 
-	$("#newMessageForm").submit(function(e){
+	$(document).on('click', '#submitMessage', function(e) {
     	e.preventDefault();
-	});
+        $("#messageArea").val('');
+        $("#messageArea").unbind(e);
 
+		$.post('ajax/sendnewmessage',
+			{},
+			function(html) {
+				$(".userMessageDiv").show();
+			}
+		);
+	});
     $(document).on('click', '.btn-tarkastele', function(e) {
     	e.preventDefault();
 
@@ -24,6 +32,7 @@ $(document).ready(function(){
 				$(".modal-body").removeClass('loader');
 				$(".modal-body").html(html);
 				$(".userMessageDiv").addClass("text-right");
+				$(".userMessageDiv").hide();
 			}
 		);
 	});

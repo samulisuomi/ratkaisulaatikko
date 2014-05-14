@@ -40,11 +40,11 @@
 <hr>
 <div class="row">
 	<div class="col-xs-7 pull-right">
-		<form class="form-inline" id="newMessageForm" role="form">
+		<form class="form-inline" name="messageForm" method="POST" role="form" action="/ajax/sendnewmessage">
 			<div class="form-group">
 				<textarea class="form-control" rows="2" id="messageArea" placeholder="Kirjoita viestisi tähän."></textarea>
 			</div>
-				<button type="submit" id="submitMessage" class="btn btn-primary">Lähetä</button>
+				<button type="button" id="submitMessage" class="btn btn-primary">Lähetä</button>
 		</form>
 	</div>
 </div>
